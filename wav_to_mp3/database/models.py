@@ -23,7 +23,7 @@ class User(Base):
 
 
 class Audio(Base):
-    __tablename___ = "audios"
+    __tablename__ = "audios"
 
     id: Mapped[UUID] = mapped_column(UUID, primary_key=True)
     file: Mapped[BYTEA] = mapped_column(BYTEA)
