@@ -2,7 +2,7 @@
 
 from fastapi import FastAPI
 
-from vaw_to_mp3.database import database
+from wav_to_mp3.database import database
 
 app = FastAPI()
 
