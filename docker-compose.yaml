@@ -8,6 +8,7 @@ services:
       - .env
     environment:
        - POSTGRES_URL=postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_CONTAINER_NAME}:5432/${POSTGRES_DB}
+       - FILE_SIZE_LIMIT=${FILE_SIZE_LIMIT}
     links:
       - postgres
     ports:

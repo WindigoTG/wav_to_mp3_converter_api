@@ -27,6 +27,7 @@ class Audio(Base):
 
     id: Mapped[UUID] = mapped_column(UUID, primary_key=True)
     file: Mapped[BYTEA] = mapped_column(BYTEA)
+    name: Mapped[str] = mapped_column(String())
     user_id: Mapped[str] = mapped_column(ForeignKey("users.id"))
     user: Mapped[User] = relationship(back_populates="audios")
 

@@ -13,6 +13,15 @@ class UserResponse(BaseModel):
     access_token: str
 
 
+class AudioUploadedResponse(BaseModel):
+    """ Модель ответа с данными успешно загруженного аудиофайла. """
+
+    model_config = ConfigDict(from_attributes=True)
+
+    audio_id: str
+    download_url: str
+
+
 class FailResponse(BaseModel):
     """Модель неудачного ответа."""
 

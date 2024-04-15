@@ -19,8 +19,17 @@ router = APIRouter()
     tags=[Tags.users],
 )
 async def create_user(
-  username: Annotated[str, Header()]
+  username: Annotated[str, Header()],
 ):
+    """
+    Создание пользователя.
+
+    Args:
+         username (str): Имя пользователя (до 30 символов).
+
+    Returns:
+        username, user_id, access_token.
+    """
     result, user = await crud_operations.create_user(username)
 
     if result == Result.Success:
